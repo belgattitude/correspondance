@@ -9,7 +9,7 @@ import type {
 } from 'next/dist/shared/lib/utils';
 import type { DocumentContext, DocumentProps } from 'next/document';
 import Document, { Html, Main, Head, NextScript } from 'next/document';
-import React, { Children as ReactChildren, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { emotionRenderStatic } from '@/core/nextjs/emotion-render-static';
 
 type Props = DocumentProps;

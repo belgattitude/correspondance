@@ -8,6 +8,8 @@ const MessageCtn = styled.div`
 
 const MessageBody = styled.div`
   font-weight: bolder;
+  font-variation-settings: 'wght' 700;
+  //font-weight: bolder;
   font-size: 3em;
   color: dimgrey;
   line-height: 1.1em;
@@ -16,40 +18,43 @@ const MessageBody = styled.div`
   }
   p {
     margin-top: 1em;
+    em {
+      font-synthesis: none;
+      font-variation-settings: 'slant' 18, 'wght' 200;
+    }
   }
 `;
 
 const message = `
-Parfois j'envenime le présent par une présence top sûrement surveillée,
-avec la lenteur d'un object inanimé. Par seulement une aide précipitée,
-elle lave l'assombrissement flêtri d'un souvenir ancien.
+Parfois j'envenime le présent par une présence trop contrôlée,
+avec la lenteur d'un object inanimé. 
 
-C'est là à cet endroit précis suspendu entre deux cîmes d'arbres
-que la couleur prends forme conique, sphérique, scénique
+*(Par seulement une aide précipitée,
+elle lave l'assombrissement flêtri d'un souvenir ancien.)*
+
+C'est là, à cet endroit précis, suspendu entre deux cîmes d'arbres
+que la couleur prends forme conique, sphérique, scénique.
 
 Puis un autre jour, différenciation par le sourire d'un soleil
 levant.
 
 Il y a un souffle divin caché entre les lignes du destin en courbe et 
-prolongations, le décor
-enseveli, redécoré en quadrillages symmétriques
-
+prolongations, le décor enseveli, redécoré en quadrillages symétriques
 semble se courber afin de former un lit de rivière
 
 Elle emprunte, l'eau, les dessins fermentés d'un angle contrarié.
 
 Au sommet d'un souterrain.
 
-Transfiguration déraisonnée de sagesse. 
-Aux accents de tendresse délibérée. De-libérée.
+Transfiguration déraisonnée de sagesse aux accents de tendresse délibérée. 
 
-Aimant, amante
+Dé-libérée, aimante, amante.
 
-Dans la profondeur de cette nuit
+Profondeur de cette nuit
 
 Ici et maintenant,
 
-un réveil
+Un réveil
 `;
 
 export const Message: FC = (_props) => {
