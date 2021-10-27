@@ -10,23 +10,12 @@ const userData: Prisma.UserCreateInput[] = [
     lastName: 'Vanvelthem',
     nickname: 'belgattitude',
     email: 'belgattitude@gmail.com',
-    posts: {
-      create: [
-        {
-          title: 'Nextjs monorepo example',
-          link: 'https://github.com/belgattitude/correspondance',
-          image:
-            'https://images.unsplash.com/photo-1625904835711-fa25795530e8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80',
-          publishedAt: new Date(),
-        },
-      ],
-    },
   },
 ];
 
 async function main() {
   console.log(`Start seeding ...`);
-  // users and posts
+  // users
   for (const u of userData) {
     const user = await prisma.user.upsert({
       where: { email: u.email },
