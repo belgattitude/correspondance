@@ -21,20 +21,6 @@ model Poem {
   @@map(name: "poem")
 }
 
-model Post {
-  id        Int     @id @default(autoincrement())
-  title     String
-  content   String?
-  link      String?
-  image     String?
-  author    User?   @relation(fields: [authorId], references: [id])
-  authorId  Int?
-  publishedAt   DateTime?  @map(name: "published_at")
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-
-  @@map(name: "post")
-}
 
 model User {
   id            Int       @id @default(autoincrement())
@@ -46,7 +32,6 @@ model User {
   image         String?
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-  posts         Post[]
 
   @@map(name: "user")
 }

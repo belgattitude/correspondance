@@ -8,7 +8,7 @@ type Props = {
   /** Add HomeRoute props here */
 };
 
-export default function HomeRoute(
+export default function DemoRoute(
   _props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
   return <HomePage />;
