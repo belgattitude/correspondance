@@ -1,15 +1,18 @@
-import { RandomUtils } from '@your-org/core-lib';
+import { StringConvert } from '@your-org/core-lib/utils/string-convert';
 import { NextSeo } from 'next-seo';
 import { MainLayout } from '@/components/layout/main-layout';
 import { Message } from '@/features/home/blocks/message';
 import { messages } from '@/features/home/data/messages';
 
 type Props = {
+  msgSlug: string;
   children?: never;
 };
 
-export const HomePage: React.FC<Props> = () => {
-  const msg = messages[RandomUtils.getRandomInt(0, messages.length - 1)];
+export const MessagePage: React.FC<Props> = (props) => {
+  const { msgSlug } = props;
+  const msg = messages[StringConvert.toSafeInteger(msgSlug) ?? 0];
+
   return (
     <>
       <NextSeo

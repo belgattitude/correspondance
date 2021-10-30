@@ -34,27 +34,25 @@ Un réveil
   // second message
 
   `
-La non préméditation, l'attente du nouveau né, celui
-qui appelle, rappelle le cycle de la renonciation à l'acte
-de renouveller.
+La non préméditation, l'attente du nouveau né appelle et rappelle 
+le cycle de la renonciation à l'acte de renouveller.
 
 Sans pensée, sans tâche, les larmes naissantes, écriture automatique
-amplifiée par l'événement de la préférence, accoutimée à
-l'imagier troglodyte vivant sous la terre rouge de l'oubli.
+amplifiée par l'événement de l'indécision.
+ 
+Sous la terre rouge de l'oubli.
 
-De l'idéal. 
+Et de l'idéal. 
 
 Evolué en serpents qui redéfinissent l'accélération d'une particule
 élémentaire. 
 
-Se faisant femme, transfigurée en sens unique
+Perfusion de sagesse.
+ 
+Prendre l'apparence trompeuse
+d'un danseur circulaire, s'appuyer sur le vide,
 
-perfusion de sagesse.
-
-il y a longtemps qu l'oublie remplace la vacuité
-de mon esprit contredit par l'apparence trompeuse
-d'un danseur sirculaire, je m'appuie sur le vide,
-je glisse, le décor tombe ne reste que l'imaginaire
+Je glisse, le décor tombe. Ce reste que l'imaginaire
 d'un tableau de la renaissance italienne
 
 Brulée par la chaleur de tes lèvres,
@@ -64,35 +62,41 @@ Cheval glacé.
   `
 C'est avant tout une tentative, un élan reçu, échangé.
 
-Initié pieds dans l'immense surface des sables.
-Pas croisés, chemins en circonférences délimitées.
+Initié pieds nus dans l'immense surface des sables.
 
-Des traces.
+Pas à pas sur les traces délaissées du silence.
 
-Le talon s'enfonce, la paume effleure
+Le talon s'enfonce, la paume effleure d'un mouvement
+qui se prolonge jusqu'au dernier morceau de monde.
 
-Il s'agissait d'éphémères mouvements
-rythmés sur la peau d'une diagonale carrée
-d'un morceau de monde.
+Celui de l'imaginaire, par delà le connu.
 
-Et plus précisément, 
+Puis reviens près de toi, 
 
-Celui de l'imaginaire.
+à nouveau intime et délicat.
 
-Cela fait comme ceci
+Sur la peau, cela fait comme ceci
 
 [dessin]
 
 *(Vu depuis le sommet)*
 
-La femme passe, dépasse, le sang ne coule
-pas le long de ses jambes *(ou plus)*.
+Ensuite, une femme passe et son sang ne coule
+plus le long de ses jambes *(car la douleur est éphémère)*.
 
-Ils ne se décident que lorsque le
+Elle regarde.
 
-SOLEIL les BRÛLE.
+Il ne reste plus qu'à attendre, là nu, dans le présent. 
 
-Et cela se traduit dans la danse par
-un arrêt dans la chute.
+Ne se décider que lorsque le
+
+SOLEIL nous BRÛLE.
+
+Tout cela se traduit dans la danse par
+un arrêt dans la chute,
+
+une absence de mouvement.
+
+*(du moins visible)*
   `,
 ];
