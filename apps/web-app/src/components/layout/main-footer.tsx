@@ -4,7 +4,6 @@ import type { FC } from 'react';
 import FooterWaves from '@/public/images/layout/footer-waves.svg';
 
 const BgWaved = styled(FooterWaves)`
-  //background-size: cover;
   object-fit: cover;
   position: absolute;
   width: 100%;
