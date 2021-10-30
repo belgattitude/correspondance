@@ -5,16 +5,22 @@ import { messages } from '../data/messages';
 
 const MessageCtn = styled.div`
   padding: 3rem;
-  font-size: 2.5em;
-  line-height: 1.12em;
-  @media (min-width: 600px) {
+  font-size: 2.4em;
+  line-height: 1.25em;
+  @media (min-width: 1000px) {
+    padding: 8rem;
+    font-size: 5em;
+  }
+
+  @media (min-width: 600px) and (max-width: 999px) {
+    line-height: 1.18em;
     padding: 4rem;
     font-size: 4em;
   }
 `;
 
 const MessageBody = styled.div`
-  font-weight: bolder;
+  font-weight: 800;
   font-variation-settings: 'wght' 700;
   //font-weight: bolder;
 
