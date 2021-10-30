@@ -31,14 +31,6 @@ export const MainFooter: FC = () => {
       <div className={'bgImage'}>
         <BgWaved />
       </div>
-      <div className={'content'}>
-        <a
-          href={'https://github.com/belgattitude/correspondance'}
-          target={'_blank'}
-          rel={'noopener noreferrer'}>
-          <GithubIcon />
-        </a>
-      </div>
     </FooterCtn>
   );
 };

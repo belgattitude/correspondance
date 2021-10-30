@@ -3,19 +3,21 @@ import type { FC } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const MessageCtn = styled.div`
-  padding: 3em;
+  padding: 3rem;
+  font-size: 2.5em;
+  line-height: 1.1em;
+  @media (min-width: 600px) {
+    padding: 4rem;
+    font-size: 4em;
+  }
 `;
 
 const MessageBody = styled.div`
   font-weight: bolder;
   font-variation-settings: 'wght' 700;
   //font-weight: bolder;
-  font-size: 3em;
+
   color: dimgrey;
-  line-height: 1.1em;
-  @media (min-width: 600px) {
-    font-size: 4em;
-  }
   p {
     margin-top: 1em;
     em {
