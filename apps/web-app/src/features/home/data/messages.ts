@@ -34,27 +34,25 @@ Un réveil
   // second message
 
   `
-La non préméditation, l'attente du nouveau né, celui
-qui appelle, rappelle le cycle de la renonciation à l'acte
-de renouveller.
+La non préméditation, l'attente du nouveau né appelle et rappelle 
+le cycle de la renonciation à l'acte de renouveller.
 
 Sans pensée, sans tâche, les larmes naissantes, écriture automatique
-amplifiée par l'événement de la préférence, accoutimée à
-l'imagier troglodyte vivant sous la terre rouge de l'oubli.
+amplifiée par l'événement de l'indécision.
+ 
+Sous la terre rouge de l'oubli.
 
-De l'idéal. 
+Et de l'idéal. 
 
 Evolué en serpents qui redéfinissent l'accélération d'une particule
 élémentaire. 
 
-Se faisant femme, transfigurée en sens unique
+Perfusion de sagesse.
+ 
+Prendre l'apparence trompeuse
+d'un danseur circulaire, s'appuyer sur le vide,
 
-perfusion de sagesse.
-
-il y a longtemps qu l'oublie remplace la vacuité
-de mon esprit contredit par l'apparence trompeuse
-d'un danseur sirculaire, je m'appuie sur le vide,
-je glisse, le décor tombe ne reste que l'imaginaire
+Je glisse, le décor tombe. Ce reste que l'imaginaire
 d'un tableau de la renaissance italienne
 
 Brulée par la chaleur de tes lèvres,
