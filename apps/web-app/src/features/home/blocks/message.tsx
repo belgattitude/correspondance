@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import type { FC } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { messages } from '../data/messages';
 
 const MessageCtn = styled.div`
   padding: 3rem;
@@ -34,13 +33,18 @@ const MessageBody = styled.div`
   }
 `;
 
-const message = messages[2];
+type Props = {
+  message: string;
+};
 
-export const Message: FC = (_props) => {
+export const Message: FC<Props> = (props) => {
+  const { message } = props;
   return (
     <MessageCtn>
       <MessageBody>
-        <ReactMarkdown>{message}</ReactMarkdown>
+        <ReactMarkdown skipHtml={false} allowedElements={['div', 'p']}>
+          {message}
+        </ReactMarkdown>
       </MessageBody>
     </MessageCtn>
   );

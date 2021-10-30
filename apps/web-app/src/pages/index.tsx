@@ -1,6 +1,6 @@
 import { BadRequest } from '@tsed/exceptions';
 import type { GetStaticProps, InferGetServerSidePropsType } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { getServerSideTranslations } from '@/core/i18n/get-server-side-translations';
 import { homeConfig } from '@/features/home/home.config';
 import { HomePage } from '@/features/home/pages/home.page';
 
@@ -22,8 +22,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const { i18nNamespaces } = homeConfig;
   return {
     props: {
-      // i18nNamespaces.slice() is needed here to get rid off readonly
-      ...(await serverSideTranslations(locale, i18nNamespaces.slice())),
+      ...(await getServerSideTranslations(locale, i18nNamespaces)),
     },
   };
 };

@@ -64,35 +64,41 @@ Cheval glacé.
   `
 C'est avant tout une tentative, un élan reçu, échangé.
 
-Initié pieds dans l'immense surface des sables.
-Pas croisés, chemins en circonférences délimitées.
+Initié pieds nus dans l'immense surface des sables.
 
-Des traces.
+Pas à pas sur les traces délaissées du silence.
 
-Le talon s'enfonce, la paume effleure
+Le talon s'enfonce, la paume effleure d'un mouvement
+qui se prolonge jusqu'au dernier morceau de monde.
 
-Il s'agissait d'éphémères mouvements
-rythmés sur la peau d'une diagonale carrée
-d'un morceau de monde.
+Celui de l'imaginaire, par delà le connu.
 
-Et plus précisément, 
+Puis reviens près de toi, 
 
-Celui de l'imaginaire.
+à nouveau intime et délicat.
 
-Cela fait comme ceci
+Sur la peau, cela fait comme ceci
 
 [dessin]
 
 *(Vu depuis le sommet)*
 
-La femme passe, dépasse, le sang ne coule
-pas le long de ses jambes *(ou plus)*.
+Ensuite, une femme passe et son sang ne coule
+plus le long de ses jambes *(car la douleur est éphémère)*.
 
-Ils ne se décident que lorsque le
+Elle regarde.
 
-SOLEIL les BRÛLE.
+Il ne reste plus qu'à attendre, là nu, dans le présent. 
 
-Et cela se traduit dans la danse par
-un arrêt dans la chute.
+Ne se décider que lorsque le
+
+SOLEIL nous BRÛLE.
+
+Tout cela se traduit dans la danse par
+un arrêt dans la chute,
+
+une absence de mouvement.
+
+*(du moins visible)*
   `,
 ];
