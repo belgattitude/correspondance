@@ -19,9 +19,6 @@ export const HomePage: React.FC<Props> = () => {
       />
       <MainLayout>
         <Message />
-        <Jumbotron />
-        <div className={'pt-8'} />
-        <DemoApiBlock />
       </MainLayout>
     </>
   );
