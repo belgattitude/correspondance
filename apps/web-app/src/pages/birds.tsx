@@ -36,7 +36,6 @@ export const BirdsCanvas: React.FC = () => {
               : bird === 'flamingo'
               ? 0.25 + Math.random()
               : 1 + Math.random() - 0.5;
-
           return (
             <Bird
               key={i}
