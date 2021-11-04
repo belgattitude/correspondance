@@ -17030,7 +17030,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"three-stdlib@npm:^2.5.4":
+"three-stdlib@npm:2.5.5, three-stdlib@npm:^2.5.4":
   version: 2.5.5
   resolution: "three-stdlib@npm:2.5.5"
   dependencies:
@@ -18186,6 +18186,7 @@ resolve@^2.0.0-next.3:
     sync-directory: 4.0.5
     tailwindcss: 2.2.19
     three: 0.134.0
+    three-stdlib: 2.5.5
     ts-jest: 27.0.7
     ts-node: 10.4.0
     type-fest: 2.5.2
