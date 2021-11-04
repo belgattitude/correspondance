@@ -1,6 +1,6 @@
-import { css } from '@emotion/css';
 import styled from '@emotion/styled';
 import clsx from 'clsx';
+import Image from 'next/image';
 import type { FC } from 'react';
 import { useInView } from 'react-intersection-observer';
 import ReactMarkdown from 'react-markdown';
