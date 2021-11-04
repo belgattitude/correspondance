@@ -2,7 +2,6 @@ import { useAnimations, useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useEffect } from 'react';
 import type * as THREE from 'three';
-import type { AnimationClip } from 'three';
 import type { GLTF } from 'three-stdlib';
 
 export type ObjectMap = {
