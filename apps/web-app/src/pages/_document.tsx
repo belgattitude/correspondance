@@ -4,8 +4,6 @@ import type {
   AppInitialProps,
   AppPropsType,
   NextComponentType,
-  RenderPage,
-  DocumentInitialProps,
 } from 'next/dist/shared/lib/utils';
 import type { DocumentContext, DocumentProps } from 'next/document';
 import Document, { Html, Main, Head, NextScript } from 'next/document';

@@ -78,6 +78,7 @@ Puis reviens près de toi,
 Sur la peau, cela fait comme ceci
 
 [dessin]
+![Dream of kandisky](/images/dreams-of-kandinsky.jpg)
 
 *(Vu depuis le sommet)*
 
