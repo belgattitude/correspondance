@@ -1,5 +1,5 @@
 import { BadRequest } from '@tsed/exceptions';
-import type { GetStaticProps, InferGetServerSidePropsType } from 'next';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { getServerSideTranslations } from '@/core/i18n/get-server-side-translations';
 import { homeConfig } from '@/features/home/home.config';
 import { HomePage } from '@/features/home/pages/home.page';
@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function IndexRoute(
-  _props: InferGetServerSidePropsType<typeof getStaticProps>
+  _props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   return <HomePage />;
 }
