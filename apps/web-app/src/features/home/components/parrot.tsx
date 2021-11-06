@@ -14,7 +14,6 @@ type GLTFResult = GLTF & {
 };
 
 type ActionName = 'KeyAction';
-type GLTFActions = [ActionName, THREE.AnimationAction][];
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>();
