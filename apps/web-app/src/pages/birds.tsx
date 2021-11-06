@@ -11,7 +11,7 @@ const canvasStyle: React.CSSProperties = {
   width: '100vw',
   height: '100vh',
   position: 'fixed',
-  zIndex: -1,
+  zIndex: 1,
 };
 
 export const BirdsCanvas: React.FC = () => {

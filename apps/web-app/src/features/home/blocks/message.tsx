@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import clsx from 'clsx';
-import Image from 'next/image';
 import type { FC } from 'react';
 import { useInView } from 'react-intersection-observer';
 import ReactMarkdown from 'react-markdown';
@@ -77,7 +76,7 @@ type ParagraphProps = {
 };
 const Paragraph: FC<ParagraphProps> = (props) => {
   const { children } = props;
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.5,
     delay: 300,
     initialInView: false,

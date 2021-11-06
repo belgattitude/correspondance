@@ -4,11 +4,6 @@ import { useEffect } from 'react';
 import type * as THREE from 'three';
 import type { GLTF } from 'three-stdlib';
 
-export type ObjectMap = {
-  nodes: { [name: string]: THREE.Object3D };
-  materials: { [name: string]: THREE.Material };
-};
-
 type GLTFResult = GLTF & {
   nodes: {
     Object_0: THREE.Mesh;
