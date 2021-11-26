@@ -38,12 +38,9 @@ function Scene() {
   useEffect(() => void video.play(), [video]);
   /*
   return (
-
     <group>
-
       <mesh scale={size} rotation={[0, 0, 0]} position={[0, 0, 1.1]}>
         <planeGeometry args={[3.2, 1.9]} />
-
 
         <meshStandardMaterial emissive={new Color('white')} side={DoubleSide}>
           <videoTexture attach="map" args={[video]} />
@@ -51,8 +48,8 @@ function Scene() {
         </meshStandardMaterial>
       </mesh>
     </group>
-  );
-  */
+  );*/
+
   return (
     <group>
       <Text
@@ -65,7 +62,7 @@ function Scene() {
         font="https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff"
         anchorX="center"
         anchorY="middle"
-        fillOpacity={0}
+        fillOpacity={1}
         strokeWidth={'2.5%'}
         strokeColor="#000000">
         Parfois j'envenime le présent par une présence trop contrôlée, avec la
@@ -100,10 +97,12 @@ export default function VideoRoute() {
         style={canvasStyle}
         orthographic
         camera={{ position: [0, 0, 100] }}>
+        {/*
         <Effects>
-          {/*<bloomPass attachArray="passes" />*/}
+          <bloomPass attachArray="passes" />
           <glitchPass attachArray="passes" />
         </Effects>
+      */}
         <OrbitControls maxPolarAngle={Math.PI / 2} minPolarAngle={0} />
         <directionalLight intensity={0.05} />
         <pointLight intensity={0.2} color="blue" />
