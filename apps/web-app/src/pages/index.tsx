@@ -22,9 +22,9 @@ const TextPane = () => {
   const textRef = useRef<Mesh>();
   useFrame(() => {
     if (textRef.current !== undefined) {
-      textRef.current.rotation.x = textRef.current.rotation.y += 0.0001;
-      textRef.current.rotation.y = textRef.current.rotation.x += 0.0001;
-      textRef.current.rotation.z = textRef.current.rotation.y += 0.005;
+      //textRef.current.rotation.x = textRef.current.rotation.y += 0.0001;
+      //textRef.current.rotation.y = textRef.current.rotation.x += 0.0001;
+      //textRef.current.rotation.z = textRef.current.rotation.y += 0.005;
     }
   });
   return (
@@ -32,6 +32,7 @@ const TextPane = () => {
       ref={textRef}
       color={'#4c30f9'}
       position={[0, 6, -5]}
+      rotation={[0, 0.0001, 0.1]}
       fontSize={0.5}
       maxWidth={200}
       lineHeight={1}
@@ -52,7 +53,7 @@ const TextPane = () => {
 
 const Index = () => {
   const meshRef = useRef<Mesh>();
-  //const [depthBuffer, setDepth] = useState();
+  const [depthBuffer, setDepth] = useState();
 
   useFrame(() => {
     if (meshRef.current !== undefined) {
@@ -73,6 +74,16 @@ const Index = () => {
   useEffect(() => void video.play(), [video]);
   return (
     <>
+      <DepthBuffer ref={setDepth} />
+      <SpotLight
+        penumbra={0.5}
+        depthBuffer={depthBuffer}
+        position={[3, 2, 0]}
+        intensity={0.5}
+        angle={0.5}
+        color={'#4cfaff'}
+        castShadow
+      />
       {/*
       <DepthBuffer ref={setDepth} />
       <SpotLight
@@ -95,16 +106,19 @@ const Index = () => {
       />
 */}
       <mesh ref={meshRef}>
-        <sphereGeometry args={[2, 2]} />
-        <MeshWobbleMaterial color={'white'} speed={1}>
+        {/*<sphereGeometry args={[2, 2]} />*/}
+        <boxGeometry args={[2, 2, -3]} />
+        <MeshWobbleMaterial color={'white'} speed={0.8}>
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
       </mesh>
-      {/*
-      <Plane receiveShadow rotation-x={-Math.PI / 2} args={[100, 100]}>
-        <meshPhongMaterial />
-      </Plane>
-      */}
+
+      <mesh ref={meshRef} position={[3, 0, 0]}>
+        <sphereGeometry args={[2, 2]} />
+        <MeshWobbleMaterial color={'white'} speed={0.8}>
+          <videoTexture attach="map" args={[video]} />
+        </MeshWobbleMaterial>
+      </mesh>
     </>
   );
 
@@ -120,8 +134,11 @@ export default function VideoRoute() {
   return (
     <>
       <Canvas style={canvasStyle} mode="concurrent">
-        <ambientLight intensity={0.4} />
-        <directionalLight color="yellow" position={[0, 5, 5]} />
+        <ambientLight intensity={0.03} />
+        <directionalLight
+          color={'rgba(241,193,189,0.5)'}
+          position={[0, 5, 5]}
+        />
         <Index />
         <TextPane />
 
