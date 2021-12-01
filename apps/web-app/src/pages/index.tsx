@@ -5,6 +5,7 @@ import {
   Plane,
   DepthBuffer,
   SpotLight,
+  Text,
 } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useEffect, useRef, useState } from 'react';
@@ -16,6 +17,38 @@ const canvasStyle: React.CSSProperties = {
 };
 
 softShadows();
+
+const TextPane = () => {
+  const textRef = useRef<Mesh>();
+  useFrame(() => {
+    if (textRef.current !== undefined) {
+      textRef.current.rotation.x = textRef.current.rotation.y += 0.0001;
+      textRef.current.rotation.y = textRef.current.rotation.x += 0.0001;
+      textRef.current.rotation.z = textRef.current.rotation.y += 0.005;
+    }
+  });
+  return (
+    <Text
+      ref={textRef}
+      color={'#4c30f9'}
+      position={[0, 6, -5]}
+      fontSize={0.5}
+      maxWidth={200}
+      lineHeight={1}
+      letterSpacing={0.09}
+      textAlign={'left'}
+      font="https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff"
+      anchorX="center"
+      anchorY="middle"
+      outlineWidth={0.09}
+      outlineColor="#ffffff">
+      qksdf h skjqdhf sdf kjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
+      sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
+      sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
+      sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
+    </Text>
+  );
+};
 
 const Index = () => {
   const meshRef = useRef<Mesh>();
@@ -90,6 +123,8 @@ export default function VideoRoute() {
         <ambientLight intensity={0.4} />
         <directionalLight color="yellow" position={[0, 5, 5]} />
         <Index />
+        <TextPane />
+
         <OrbitControls
           maxPolarAngle={90}
           minPolarAngle={1}
