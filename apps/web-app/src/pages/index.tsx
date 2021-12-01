@@ -23,7 +23,7 @@ const Index = () => {
 
   useFrame(() => {
     if (meshRef.current !== undefined) {
-      return (meshRef.current.rotation.x = meshRef.current.rotation.y += 0.01);
+      meshRef.current.rotation.x = meshRef.current.rotation.y += 0.0001;
     }
   });
   const [video] = useState(() => {
