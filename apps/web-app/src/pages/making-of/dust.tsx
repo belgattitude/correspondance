@@ -125,11 +125,9 @@ const Index = () => {
       <mesh ref={meshRef}>
         <sphereGeometry args={[2, 1]} />
         <MeshWobbleMaterial
-          doubleSide={true}
           color={'white'}
           speed={0.8}
           wireframe={false}
-          wireframeLinejoin={'10'}
           stencilWrite={true}>
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
