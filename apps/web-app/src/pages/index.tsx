@@ -2,9 +2,6 @@ import {
   softShadows,
   MeshWobbleMaterial,
   OrbitControls,
-  Plane,
-  SpotLight,
-  Text,
 } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useEffect, useRef, useState } from 'react';
@@ -19,8 +16,7 @@ softShadows();
 
 const Index = () => {
   const meshRef = useRef<Mesh>();
-  //const [depthBuffer, setDepth] = useState();
-
+  const [wireframe, setWireframe] = useState(true);
   useFrame(() => {
     if (meshRef.current !== undefined) {
       meshRef.current.rotation.x = meshRef.current.rotation.y += 0.0001;
@@ -29,8 +25,8 @@ const Index = () => {
   const [video] = useState(() => {
     const vid = document.createElement('video');
     //vid.src = 'https://soluble.io/studioworks/mhr/assets/paola-video-bg.mp4';
-    vid.src = '/videos/paola-video-bg.m4v';
-    //vid.src = '/videos/drone.mp4';
+    //vid.src = '/videos/paola-video-bg.m4v';
+    vid.src = '/videos/red.mp4';
     vid.crossOrigin = 'Anonymous';
     vid.loop = true;
     vid.playbackRate = 1;
@@ -40,16 +36,9 @@ const Index = () => {
   useEffect(() => void video.play(), [video]);
   return (
     <>
-      <mesh ref={meshRef}>
+      <mesh ref={meshRef} onClick={() => setWireframe(!wireframe)}>
         <sphereGeometry args={[2, 2]} />
-        <MeshWobbleMaterial
-          color={'white'}
-          speed={1}
-          wireframe={false}
-          colorWrite={true}
-          stencilWrite={true}
-          precision={'highp'}
-        >
+        <MeshWobbleMaterial color={'red'} speed={0.8} wireframe={wireframe}>
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
       </mesh>
