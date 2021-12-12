@@ -61,7 +61,8 @@ export const Bird: React.FC<BirdProps> = (props) => {
           anchorY="middle"
           fillOpacity={0}
           strokeWidth={'2.5%'}
-          strokeColor="#ffffff">
+          strokeColor="#ffffff"
+        >
           LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO
           EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD
           MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT
@@ -74,7 +75,8 @@ export const Bird: React.FC<BirdProps> = (props) => {
           name="Object_0"
           morphTargetDictionary={nodes.Object_0.morphTargetDictionary}
           morphTargetInfluences={nodes.Object_0.morphTargetInfluences}
-          rotation={[1.5707964611537577, 0, 0]}>
+          rotation={[1.5707964611537577, 0, 0]}
+        >
           <bufferGeometry attach="geometry" {...nodes.Object_0.geometry} />
           <meshStandardMaterial
             attach="material"

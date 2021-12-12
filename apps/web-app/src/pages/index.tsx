@@ -48,7 +48,8 @@ const Index = () => {
           wireframe={false}
           colorWrite={true}
           stencilWrite={true}
-          precision={'highp'}>
+          precision={'highp'}
+        >
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
       </mesh>
