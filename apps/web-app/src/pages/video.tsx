@@ -64,7 +64,8 @@ function Scene() {
         anchorY="middle"
         fillOpacity={1}
         strokeWidth={'2.5%'}
-        strokeColor="#000000">
+        strokeColor="#000000"
+      >
         Parfois j'envenime le présent par une présence trop contrôlée, avec la
         torpeur d'un object inanimé. \n (Par seulement une aide précipitée, elle
         lave l'assombrissement flêtri d'un souvenir ancien.) C'est là, à cet
@@ -96,7 +97,8 @@ export default function VideoRoute() {
       <Canvas
         style={canvasStyle}
         orthographic
-        camera={{ position: [0, 0, 100] }}>
+        camera={{ position: [0, 0, 100] }}
+      >
         {/*
         <Effects>
           <bloomPass attachArray="passes" />

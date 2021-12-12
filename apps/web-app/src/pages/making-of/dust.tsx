@@ -43,7 +43,8 @@ const TextPane = () => {
       anchorX="center"
       anchorY="middle"
       outlineWidth={0.9}
-      outlineColor="#ffffff">
+      outlineColor="#ffffff"
+    >
       qksdf h skjqdhf sdf kjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
       sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
       sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
@@ -128,7 +129,8 @@ const Index = () => {
           color={'white'}
           speed={0.8}
           wireframe={false}
-          stencilWrite={true}>
+          stencilWrite={true}
+        >
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
       </mesh>
