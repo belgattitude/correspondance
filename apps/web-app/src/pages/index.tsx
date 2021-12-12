@@ -3,7 +3,6 @@ import {
   MeshWobbleMaterial,
   OrbitControls,
   Plane,
-  DepthBuffer,
   SpotLight,
   Text,
 } from '@react-three/drei';
@@ -18,42 +17,9 @@ const canvasStyle: React.CSSProperties = {
 
 softShadows();
 
-const TextPane = () => {
-  const textRef = useRef<Mesh>();
-  useFrame(() => {
-    if (textRef.current !== undefined) {
-      //textRef.current.rotation.x = textRef.current.rotation.y += 0.0001;
-      //textRef.current.rotation.y = textRef.current.rotation.x += 0.0001;
-      //textRef.current.rotation.z = textRef.current.rotation.y += 0.005;
-    }
-  });
-  return (
-    <Text
-      ref={textRef}
-      color={'#4c30f9'}
-      position={[0, 6, -5]}
-      rotation={[0, 0.0001, 0.1]}
-      fontSize={0.5}
-      maxWidth={200}
-      lineHeight={1}
-      letterSpacing={0.09}
-      textAlign={'left'}
-      font="https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwK4vaqI.woff"
-      anchorX="center"
-      anchorY="middle"
-      outlineWidth={0.09}
-      outlineColor="#ffffff">
-      qksdf h skjqdhf sdf kjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
-      sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
-      sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
-      sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh sdfkjh
-    </Text>
-  );
-};
-
 const Index = () => {
   const meshRef = useRef<Mesh>();
-  const [depthBuffer, setDepth] = useState();
+  //const [depthBuffer, setDepth] = useState();
 
   useFrame(() => {
     if (meshRef.current !== undefined) {
@@ -63,8 +29,8 @@ const Index = () => {
   const [video] = useState(() => {
     const vid = document.createElement('video');
     //vid.src = 'https://soluble.io/studioworks/mhr/assets/paola-video-bg.mp4';
-    //vid.src = '/videos/paola-video-bg.m4v';
-    vid.src = '/videos/red.mp4';
+    vid.src = '/videos/paola-video-bg.m4v';
+    //vid.src = '/videos/drone.mp4';
     vid.crossOrigin = 'Anonymous';
     vid.loop = true;
     vid.playbackRate = 1;
@@ -74,51 +40,23 @@ const Index = () => {
   useEffect(() => void video.play(), [video]);
   return (
     <>
-      <DepthBuffer ref={setDepth} />
-      <SpotLight
-        penumbra={0.5}
-        depthBuffer={depthBuffer}
-        position={[3, 2, 0]}
-        intensity={0.5}
-        angle={0.5}
-        color={'#4cfaff'}
-        castShadow
-      />
-      {/*
-      <DepthBuffer ref={setDepth} />
-      <SpotLight
-        penumbra={0.5}
-        depthBuffer={depthBuffer}
-        position={[3, 2, 0]}
-        intensity={0.5}
-        angle={0.5}
-        color="#ff005b"
-        castShadow
-      />
-      <SpotLight
-        penumbra={0.5}
-        depthBuffer={depthBuffer}
-        position={[-3, 2, 0]}
-        intensity={0.5}
-        angle={0.5}
-        color="#0EEC82"
-        castShadow
-      />
-*/}
       <mesh ref={meshRef}>
-        {/*<sphereGeometry args={[2, 2]} />*/}
-        <boxGeometry args={[2, 2, -3]} />
-        <MeshWobbleMaterial color={'white'} speed={0.8}>
-          <videoTexture attach="map" args={[video]} />
-        </MeshWobbleMaterial>
-      </mesh>
-
-      <mesh ref={meshRef} position={[3, 0, 0]}>
         <sphereGeometry args={[2, 2]} />
-        <MeshWobbleMaterial color={'white'} speed={0.8}>
+        <MeshWobbleMaterial
+          color={'white'}
+          speed={1}
+          wireframe={false}
+          colorWrite={true}
+          stencilWrite={true}
+          precision={'highp'}>
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
       </mesh>
+      {/*
+      <Plane receiveShadow rotation-x={-Math.PI / 2} args={[100, 100]}>
+        <meshPhongMaterial />
+      </Plane>
+      */}
     </>
   );
 
@@ -134,13 +72,9 @@ export default function VideoRoute() {
   return (
     <>
       <Canvas style={canvasStyle} mode="concurrent">
-        <ambientLight intensity={0.03} />
-        <directionalLight
-          color={'rgba(241,193,189,0.5)'}
-          position={[0, 5, 5]}
-        />
+        <ambientLight intensity={0.4} />
+        <directionalLight color="yellow" position={[0, 5, 5]} />
         <Index />
-        <TextPane />
 
         <OrbitControls
           maxPolarAngle={90}
