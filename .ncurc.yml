@@ -4,11 +4,7 @@
 reject: [
     # Add here exclusions on packages if any
     # i.e: '@types/node'
-
     "execa",
-
-    # till eslint 8 is ready
-    "eslint",
 
     # Too early cause in esm
     "is-port-reachable"

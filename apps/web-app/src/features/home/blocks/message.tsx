@@ -89,7 +89,8 @@ const Paragraph: FC<ParagraphProps> = (props) => {
       className={clsx(
         'paragraph',
         inView ? 'paragraph-active' : 'paragraph-inactive'
-      )}>
+      )}
+    >
       {children}
     </p>
   );
@@ -104,7 +105,8 @@ export const Message: FC<Props> = (props) => {
           skipHtml={false}
           components={{
             p: Paragraph,
-          }}>
+          }}
+        >
           {message}
         </ReactMarkdown>
       </MessageBody>
