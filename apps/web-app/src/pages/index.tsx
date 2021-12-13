@@ -2,9 +2,6 @@ import {
   softShadows,
   MeshWobbleMaterial,
   OrbitControls,
-  Plane,
-  DepthBuffer,
-  SpotLight,
 } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useEffect, useRef, useState } from 'react';
@@ -19,11 +16,10 @@ softShadows();
 
 const Index = () => {
   const meshRef = useRef<Mesh>();
-  //const [depthBuffer, setDepth] = useState();
-
+  const [wireframe, setWireframe] = useState(true);
   useFrame(() => {
     if (meshRef.current !== undefined) {
-      return (meshRef.current.rotation.x = meshRef.current.rotation.y += 0.01);
+      meshRef.current.rotation.x = meshRef.current.rotation.y += 0.0001;
     }
   });
   const [video] = useState(() => {
@@ -40,30 +36,9 @@ const Index = () => {
   useEffect(() => void video.play(), [video]);
   return (
     <>
-      {/*
-      <DepthBuffer ref={setDepth} />
-      <SpotLight
-        penumbra={0.5}
-        depthBuffer={depthBuffer}
-        position={[3, 2, 0]}
-        intensity={0.5}
-        angle={0.5}
-        color="#ff005b"
-        castShadow
-      />
-      <SpotLight
-        penumbra={0.5}
-        depthBuffer={depthBuffer}
-        position={[-3, 2, 0]}
-        intensity={0.5}
-        angle={0.5}
-        color="#0EEC82"
-        castShadow
-      />
-*/}
-      <mesh ref={meshRef}>
+      <mesh ref={meshRef} onClick={() => setWireframe(!wireframe)}>
         <sphereGeometry args={[2, 2]} />
-        <MeshWobbleMaterial color={'white'} speed={1}>
+        <MeshWobbleMaterial color={'red'} speed={0.8} wireframe={wireframe}>
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
       </mesh>
@@ -90,6 +65,7 @@ export default function VideoRoute() {
         <ambientLight intensity={0.4} />
         <directionalLight color="yellow" position={[0, 5, 5]} />
         <Index />
+
         <OrbitControls
           maxPolarAngle={90}
           minPolarAngle={1}
