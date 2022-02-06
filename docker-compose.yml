@@ -1,8 +1,8 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  correspondance-db:
-    container_name: correspondance-db
+  main-db:
+    container_name: nextjs-monorepo-example-db
     image: postgres:14-alpine
     ports:
       - target: 5432
@@ -17,7 +17,6 @@ services:
       # you may use a bind-mounted host directory instead,
       # so that it is harder to accidentally remove the volume and lose all your data!
       # - ./docker/db/data:/var/lib/postgresql/data:rw
-
 
 volumes:
   db_data:
