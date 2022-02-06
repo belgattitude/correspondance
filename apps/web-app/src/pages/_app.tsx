@@ -4,6 +4,7 @@ import { isNonEmptyString } from '@your-org/core-lib';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps as NextAppProps } from 'next/app';
 import Head from 'next/head';
+import { sentryBrowserInitConfig } from '@/config/sentry.config';
 import { AppProviders } from '../app-providers';
 
 import '@/themes/global.theme.css';
@@ -16,8 +17,6 @@ import '@fontsource/inter/400.css';
 import '@fontsource/inter/700.css';
 // @link https://fontsource.org/docs/variable-fonts
 import '@fontsource/inter/variable-full.css';
-
-import { sentryBrowserInitConfig } from '@/config/sentry.config';
 
 // Workaround for https://github.com/zeit/next.js/issues/8592
 export type AppProps = NextAppProps & {
