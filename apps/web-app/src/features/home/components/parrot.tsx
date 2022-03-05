@@ -13,17 +13,6 @@ interface ParrotGLTF extends GLTF {
   };
 }
 
-type GLTFResult = GLTF & {
-  nodes: {
-    Object_0: THREE.Mesh;
-  };
-  materials: {
-    Material_0_COLOR_0: THREE.MeshStandardMaterial;
-  };
-};
-
-type ActionName = 'KeyAction';
-
 export default function Model(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>();
   const { nodes, materials, animations } = useGLTF(
