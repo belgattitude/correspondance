@@ -5,9 +5,10 @@ import {
 } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useEffect, useRef, useState } from 'react';
+import type { CSSProperties } from 'react';
 import type { Mesh } from 'three';
 
-const canvasStyle: React.CSSProperties = {
+const canvasStyle: CSSProperties = {
   width: '100vw',
   height: '100vh',
 };
@@ -38,12 +39,7 @@ const Index = () => {
     <>
       <mesh ref={meshRef} onClick={() => setWireframe(!wireframe)}>
         <sphereGeometry args={[2, 2]} />
-        <MeshWobbleMaterial
-          color={'red'}
-          speed={0.8}
-          wireframe={wireframe}
-          format={'unused_but_typescript_asks'}
-        >
+        <MeshWobbleMaterial color={'red'} speed={0.8} wireframe={wireframe}>
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
       </mesh>
