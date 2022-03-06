@@ -58,17 +58,17 @@
     "check:renovate:config": "docker run -v renovate.json5:/usr/src/app/renovate.json5 -it renovate/renovate renovate-config-validator"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "0.4.2",
-    "@changesets/cli": "2.20.0",
-    "@commitlint/cli": "16.1.0",
-    "@commitlint/config-conventional": "16.0.0",
+    "@changesets/changelog-github": "0.4.3",
+    "@changesets/cli": "2.21.0",
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
     "@types/eslint": "8.4.1",
-    "@types/prettier": "2.4.3",
+    "@types/prettier": "2.4.4",
     "@types/shell-quote": "1.7.1",
-    "eslint": "8.8.0",
+    "eslint": "8.10.0",
     "husky": "7.0.4",
     "is-ci": "3.0.1",
-    "lint-staged": "12.3.3",
+    "lint-staged": "12.3.5",
     "npm-run-all": "4.1.5",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
@@ -84,5 +84,5 @@
     "yarn": ">=1.22.0",
     "npm": "please-use-yarn"
   },
-  "packageManager": "yarn@3.2.0-rc.14"
+  "packageManager": "yarn@3.2.0"
 }
