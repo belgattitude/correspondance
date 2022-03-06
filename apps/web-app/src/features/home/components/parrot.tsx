@@ -1,25 +1,23 @@
 import { useGLTF, useAnimations } from '@react-three/drei';
 import React, { useRef } from 'react';
 import type * as THREE from 'three';
-
+import type { MeshStandardMaterial, Mesh } from 'three';
 import type { GLTF } from 'three-stdlib';
 
-type GLTFResult = GLTF & {
-  nodes: {
-    Object_0: THREE.Mesh;
-  };
+interface ParrotGLTF extends GLTF {
   materials: {
-    Material_0_COLOR_0: THREE.MeshStandardMaterial;
+    Material_0_COLOR_0: MeshStandardMaterial;
   };
-};
-
-type ActionName = 'KeyAction';
+  nodes: {
+    Object_0: Mesh;
+  };
+}
 
 export default function Model(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>();
   const { nodes, materials, animations } = useGLTF(
     '/glb/parrot.glb'
-  ) as GLTFResult;
+  ) as unknown as ParrotGLTF;
   const { actions } = useAnimations(animations, group);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -34,7 +32,3 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
     </group>
   );
 }
-
-useGLTF.preload(
-  '/../home/sebastien/github/correspondance/apps/web-app/public/glb/parrot.glb'
-);
