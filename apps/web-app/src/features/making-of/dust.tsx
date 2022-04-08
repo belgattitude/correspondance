@@ -136,7 +136,7 @@ const Index = () => {
 export default function VideoRoute() {
   return (
     <>
-      <Canvas style={canvasStyle} mode="concurrent">
+      <Canvas style={canvasStyle}>
         <ambientLight intensity={0.03} />
         <directionalLight color={'rgb(255,255,255)'} position={[0, 5, 5]} />
         <Index />

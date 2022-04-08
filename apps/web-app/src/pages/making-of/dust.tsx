@@ -55,7 +55,7 @@ const TextPane = () => {
 
 const ThreeCanvas: React.FC = () => {
   return (
-    <Canvas style={canvasStyle} mode="concurrent" shadows={false}>
+    <Canvas style={canvasStyle} shadows={false}>
       <ambientLight intensity={0.03} />
       <directionalLight color={'rgb(255,255,255)'} position={[0, 5, 5]} />
       <Index />
