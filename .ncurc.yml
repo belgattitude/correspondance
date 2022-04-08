@@ -4,8 +4,10 @@
 reject: [
     # Add here exclusions on packages if any
     # i.e: '@types/node'
-    "execa",
+    'execa',
 
     # Too early cause in esm
-    "is-port-reachable"
-]
+    'is-port-reachable',
+    '@types/react',
+    '@types/react-dom',
+  ]
